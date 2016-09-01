@@ -31,7 +31,7 @@ function choices(user,choice) {
 		client.get('statuses/user_timeline', params, function(error, tweets, response) {
 			//console.log(tweets[tweets.length-i].text);
 			for (var i = 0; i < tweets.length; i++) {
-				console.log((i+1)+': '+tweets[i].text);
+				console.log("\n"+(i+1)+': '+tweets[i].text);
 			}
 			//console.log(tweets[0].text);
 			//console.log(response)
@@ -104,15 +104,15 @@ function choices(user,choice) {
 						//console.log("in request for omdb")
 						if (!error && response.statusCode == 200) {
 							//console.log(JSON.parse(body));
-							console.log("Title: "+JSON.parse(body)["Title"]);
-							console.log("Year Released: "+JSON.parse(body)["Year"]);
-							console.log("IMDB Rating: "+JSON.parse(body)["imdbRating"]);
-							console.log("Country(s) Produced: "+JSON.parse(body)["Country"]);
-							console.log("Language(s): "+JSON.parse(body)["Language"]);
-							console.log("Plot: "+JSON.parse(body)["Plot"]);
-							console.log("Actors: "+JSON.parse(body)["Actors"]);
-							console.log("Rotten Tomatoes Rating: "+JSON.parse(body)["tomatoRating"]);
-							console.log("Rotten Tomatoes URL(s): "+JSON.parse(body)["tomatoURL"]);
+							console.log("Title: "+JSON.parse(body)["Title"]+"\n----------\n");
+							console.log("Year Released: "+JSON.parse(body)["Year"]+"\n----------\n");
+							console.log("IMDB Rating: "+JSON.parse(body)["imdbRating"]+"\n----------\n");
+							console.log("Country(s) Produced: "+JSON.parse(body)["Country"]+"\n----------\n");
+							console.log("Language(s): "+JSON.parse(body)["Language"]+"\n----------\n");
+							console.log("Plot: "+JSON.parse(body)["Plot"]+"\n----------\n");
+							console.log("Actors: "+JSON.parse(body)["Actors"]+"\n----------\n");
+							console.log("Rotten Tomatoes Rating: "+JSON.parse(body)["tomatoRating"]+"\n----------\n");
+							console.log("Rotten Tomatoes URL(s): "+JSON.parse(body)["tomatoURL"]+"\n----------");
 						}
 						else{
 							console.log("error")
